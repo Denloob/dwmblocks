@@ -10,7 +10,7 @@ if [ -f /sys/class/power_supply/BAT0/uevent ]; then
     icon=${battery_icons[$battery_icon_index]}
 
     if [ $charging = "Charging" ]; then
-        icon+="󰚥"
+        icon+="󱐋"
     fi
 
     echo -n "${icon} ${prct}%"
