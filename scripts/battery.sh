@@ -9,7 +9,7 @@ if [ -f /sys/class/power_supply/BAT0/uevent ]; then
     battery_icon_index=$(( $prct / 10 ))
     icon=${battery_icons[$battery_icon_index]}
 
-    if [ $charging = "Charging" ]; then
+    if [[ $charging = "Charging" ]]; then
         icon+="󱐋"
     fi
 
