@@ -5,6 +5,10 @@ if [ ! -d "/sys/class/net/${INTERFACE}/wireless" ]; then
     exit
 fi
 
+case $BUTTON in
+    1) kitty -e nmtui ;;
+esac
+
 # if wifi down
 if [ "$(cat /sys/class/net/$INTERFACE/operstate)" = "down" ]; then
     printf "󰤮"

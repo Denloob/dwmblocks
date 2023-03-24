@@ -1,5 +1,9 @@
 #!/bin/bash
 
+case $BUTTON in
+    1) kitty -e battop ;;
+esac
+
 if [ -f /sys/class/power_supply/BAT0/uevent ]; then
     prct=$(cat /sys/class/power_supply/BAT0/uevent | grep "POWER_SUPPLY_CAPACITY=" | cut -d'=' -f2)
     charging=$(cat /sys/class/power_supply/BAT0/uevent | grep "POWER_SUPPLY_STATUS" | cut -d'=' -f2) # POWER_SUPPLY_STATUS=Discharging|Charging
