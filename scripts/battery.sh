@@ -21,3 +21,7 @@ if [ -f /sys/class/power_supply/BAT0/uevent ]; then
 else
     echo -n "󰂃 ??%"
 fi
+
+if [[ $prct -lt 10 && $charging != "Charging" ]]; then
+    notify-send -u critical "Warning: Low Battary" "Only $prct% left"
+fi
