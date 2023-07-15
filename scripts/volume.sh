@@ -2,6 +2,7 @@
 
 case $BUTTON in
     1) kitty -e alsamixer ;;
+    4) kitty -e "$EDITOR" "$0" ;;
 esac
 
 amixer_output=$(amixer sget Master)

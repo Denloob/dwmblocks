@@ -7,6 +7,7 @@ fi
 
 case $BUTTON in
     1) kitty -e nmtui ;;
+    4) kitty -e "$EDITOR" "$0" ;;
 esac
 
 # if wifi down

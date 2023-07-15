@@ -2,6 +2,7 @@
 
 case $BUTTON in
     1) kitty -e battop ;;
+    4) kitty -e "$EDITOR" "$0" ;;
 esac
 
 if [ -f /sys/class/power_supply/BAT0/uevent ]; then
